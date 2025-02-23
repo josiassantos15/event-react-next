@@ -1,34 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plataforma de Inscrição em Evento - React 19 & Next 15
 
-## Getting Started
+Este projeto é uma plataforma moderna para inscrição em eventos e acompanhamento de ranking e estatísticas de indicações.
+Desenvolvido com React 19, Next 15, Tailwind CSS e Zod, oferece uma experiência completa para desenvolvedores participarem
+de eventos técnicos, convidarem amigos e monitorarem seu desempenho. Projeto baseado no evento NLW Connect da
+[Rockeatseat](https://app.rocketseat.com.br)
 
-First, run the development server:
+## 📸 Capturas de Tela
+![img2.png](public/events-design.png)
 
+## 🎯 Objetivo
+Criar uma plataforma para eventos feitos por e para desenvolvedores, com foco em:
+- Inscrição simplificada
+- Sistema de indicação de amigos
+- Ranking de participantes
+- Estatísticas de engajamento
+- Validação robusta de formulários
+- Interface responsiva e acessível
+
+## 🛠️ Tecnologias Utilizadas
+- React 19
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Zod (validação de formulários)
+- HTML5 e CSS3
+
+## ⚙️ Funcionalidades Principais
+### Formulário de Inscrição
+- Campos validados em tempo real com Zod
+- Integração com API para registro seguro
+
+### Sistema de Indicação
+- Geração de links personalizados para convites
+- Rastreamento de indicações em tempo real
+
+### Ranking Competitivo
+- Visualização de posição no ranking geral
+- Medalhas por desempenho (Ouro, Prata, Bronze)
+
+### Dashboard de Estatísticas
+- Gráficos de crescimento de indicações
+- Métricas de engajamento individual
+
+### Design Responsivo
+- Layout adaptável para todos os dispositivos
+- Componentes reutilizáveis estilizados com Tailwind
+
+## 🧰 Principais Componentes
+- `SubscriptionForm`: Gerencia o formulário de inscrição com validação Zod
+- `InviteLinkInput`: Gera e gerencia links de convite personalizados
+- `Ranking`: Exibe o ranking de participantes com medalhas interativas
+- `Stats`: Apresenta gráficos e métricas de desempenho
+- `IconButton`: Botão com suporte a ícones personalizados
+- `Input`: Componente de input estilizado e reutilizável
+
+## 🚀 Como Executar o Projeto
+### Pré-requisitos
+- Node.js 18+
+- npm 9+
+
+### Clonar o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/josiassantos15/event-react-next.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instalar dependências:
+```bash
+npm install
+```
+### Executar servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Acessar no navegador:
+Abra http://localhost:3000 para visualizar a aplicação.
 
-## Learn More
+## 📂 Estrutura do Projeto
+```plaintext
+├── public/
+│   ├── background.png
+├── src/
+│   ├── app/
+│   │   ├── (home)/
+│   │   │   └── page.tsx
+│   │   │   └── subscription-form.tsx
+│   │   ├── components/
+│   │   │   ├── button.tsx
+│   │   │   ├── icon-button.tsx
+│   │   │   └── input.tsx
+│   │   ├── invite/
+│   │   │   ├── [subscriberid]/
+│   │   │   │   └── page.tsx
+│   │   │   │   └──invite-link-input.tsx
+│   │   │   │   └── ranking.tsx
+│   │   │   │   └── stats.tsx
+│   │   ├── global.css
+│   │   └── layout.tsx
+│   ├── assets/
+│   │   ├── logo.svg
+│   │   ├── medal-gold.svg
+│   │   ├── medal-silver.svg
+│   │   └── medal-cooper.svg
+│   ├── http/
+│   │   └── api.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Próximos Passos
+- Implementação de autenticação JWT
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Integração com WebSocket para atualizações em tempo real
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Sistema de conquistas e badges
 
-## Deploy on Vercel
+- Exportação de relatórios em PDF/CSV
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧑‍💻 Autor
+- Desenvolvedor: Josias Santos
+- [Email](josiassantos.contato@gmail.com)
+- [GitHub](https://github.com/josiassantos15/)
